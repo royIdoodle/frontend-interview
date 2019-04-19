@@ -4,7 +4,7 @@
 
 假设有一个数组 tasks: Promise[]（每一项都是一个 Promise 的数组）
 
-实现一个方法 `function execute(tasks: Promise[]): Promise<any[]>`，该方法将 tasks 内的任务**依次**执行，并返回一个执行结果为数组的 Promise ，该数组包含执行结果（以执行顺序排序）
+实现一个方法 `function execute(tasks: Promise[]): Promise<any[]>`，该方法将 tasks 内的任务**依次**执行，并返回一个结果为数组的 Promise ，该数组包含任务执行结果（以执行顺序排序）
 
 >限制：  
 >不添加任何依赖，仅使用 Promise，不使用 Generator 或 async
