@@ -2,14 +2,12 @@
 
 ## Case1：下面代码输出什么
 
-<pre>
-new Promise((resolve) => {
-  setTimeout(() => resolve(1), 0);
-}).then(console.log);
+NOTE: 这里的输出指的是 console.log 输出
 
-setTimeout(() => {
-  console.log(2);
-}, 0);
+<pre>
+new Promise((resolve) => setTimeout(() => resolve(1), 0)).then(console.log);
+
+setTimeout(() => console.log(2), 0);
 
 Promise.resolve(3).then(console.log);
 </pre>
