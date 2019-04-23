@@ -17,9 +17,11 @@ Promise.resolve(3).then(console.log);
 
 ## Case2: 异步任务队列
 
-假设有一个数组 tasks: Promise[]（每一项都是一个 Promise 的数组）
+定义 `type Task = () => Promise<any>` （即 Task 是一个 **类型**，这个类型是一个返回Promise的函数）
 
-实现一个方法 `function execute(tasks: Promise[]): Promise<any[]>`，该方法将 tasks 内的任务**依次**执行，并返回一个结果为数组的 Promise ，该数组包含任务执行结果（以执行顺序排序）
+假设有一个数组 tasks: Task[]（每一项都是一个 Task 类型的数组）
+
+实现一个方法 `function execute(tasks: Task[]): Promise<any[]>`，该方法将 tasks 内的任务 **依次** 执行，并返回一个结果为数组的 Promise ，该数组包含任务执行结果（以执行顺序排序）
 
 >要求：  
 >忽略异常任务，并在结果数组中用 null 占位 
