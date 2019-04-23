@@ -15,7 +15,7 @@ Promise.resolve(3).then(console.log);
 
 ## Case2: 异步任务队列
 
-定义 `type Task = () => Promise<any>` （即 Task 是一个 **类型**，这个类型是一个返回Promise的函数）
+定义 `type Task = () => Promise<any>` （即 Task 是一个 **类型**，是一个返回Promise的函数类型）  
 
 假设有一个数组 tasks: Task[]（每一项都是一个 Task 类型的数组）
 
